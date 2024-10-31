@@ -173,9 +173,11 @@ nav ul li a:active {
 .best-sellers {
     padding: 4rem 2rem;
     text-align: center;
+    background: var(--platinum);
 }
 
 .product-grid {
+    margin: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1.5rem;
@@ -194,7 +196,7 @@ nav ul li a:active {
 }
 
 .product h3 {
-    margin: 0.5rem 0;
+    margin: 0.5rem;
     font-size: 1.1rem;
 }
 
