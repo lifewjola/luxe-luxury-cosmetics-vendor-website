@@ -25,10 +25,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 50px;
-    padding: 0.5rem 2rem;
+    height: 4rem;
+    padding: 1rem 2rem;
     background-color: var(--platinum);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+nav img{
+    width: 25%;
+    height: 4rem;
 }
 
 nav ul {
@@ -59,13 +63,23 @@ nav ul li a:active {
 
 /* Hero Section */
 .hero {
-    background-image: url('../ASSETS/Luxury-1.jpeg');
+    /* background-image: url('../ASSETS/Luxury-1.jpeg');
     background-size: cover;
     background-position: center;
     position: relative;
     color: var(--antiflash-white);
     text-align: center;
-    padding: 10rem 2rem;
+    padding: 10rem 2rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../ASSETS/models2.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: var(--antiflash-white);
+    height: 40rem;
+    text-align: center;
 }
 
 .hero::before {
@@ -227,4 +241,29 @@ nav ul li a:active {
     padding: 1.5rem 2rem;
     text-align: center;
     font-size: 0.9rem;
+}
+
+input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--night);
+    border-radius: 5px;
+    margin-right: 0.5rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: var(--gold-accent);
+    cursor: pointer;
+}
+
+h3 {
+    text-align: center;
+}
+
+#pay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
