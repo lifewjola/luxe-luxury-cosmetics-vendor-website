@@ -4,31 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUXE - Luxury Cosmetics</title>
+    <link rel="icon" href= "../ASSETS/luxe_logo2.jpg"type="image/x-icon"/>
     <link rel="stylesheet" href="../STYLES/styles.css">
 </head>
 <body>
-
+    <div class="wrapper"> 
     <!-- Navigation -->
     <header>
         <nav>
             <img src="../ASSETS/luxe_logo1.jpg" alt="LUXE">
         </nav>
     </header>
-    <body>
-        <div>
-        <h1>You are to Pay $50</h1>
-        <form>
-            <label>Card Number</label><br>
-            <input type="text" name="card_number" placeholder="1234 5678 9101 1121"><br><br>
-            <label>Expiration Date</label>
-            <input type="text" name="expiration_date" placeholder="MM/YY"><br><br>
-            <label>CVV</label>
-            <input type="text" name="cvv" placeholder="123"><br>
-            <a href="checkout_confirmation.html" class="button">Pay</a>
-        </form>
+    <div class="main-content">
+    <div class="checkout-container">
+        <div class="image-section">
+            <!-- <img src="../ASSETS/other/checkout-makeup1.jpeg" alt="Product Model" class="product-image"> -->
+            <!-- <img src="../ASSETS/other/checkout-makeup2.jpeg" alt="Product Model" class="product-image"> -->
+            <img src="../ASSETS/other/checkout-model1.jpg" alt="Product Model" class="product-image">
         </div>
-    </body>
-
+        <div class="checkout-form">
+            <h2>Checkout</h2>
+            <p>Total Price: N 4000</p>
+            <p>Payment on delivery</p>
+            
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="text" placeholder="Address" required>
+                
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method">
+                    <option value="transfer">Transfer</option>
+                    <option value="card">Card</option>
+                    <option value="cash">Cash</option>
+                </select>
+                <button type="button" onclick="window.location.href='checkout_confirmation.html'">Place Order</button>
+            </form>
+        </div>
+    </div>
+</div>
     <!-- Footer -->
     <footer class="footer">
         <p>Contact us: <a href="mailto:info@luxecosmetics.com">info@luxecosmetics.com</a> | +123 456 7890</p>
@@ -38,6 +53,6 @@
             <a href="#" title="Tiktok"><img src="../ASSETS/icons8-tiktok-48.png" alt="Tiktok"></a>
         </div>
     </footer>
-
+    </div>
 </body>
 </html>
