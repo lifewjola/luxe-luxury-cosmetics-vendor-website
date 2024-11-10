@@ -41,7 +41,6 @@ nav {
     height: 4rem;
     padding: 1rem 2rem;
     background-color: var(--platinum);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 nav img{
     width: 25%;
@@ -447,3 +446,146 @@ input {
     width: 24px;
     height: 24px;
 }
+
+/* shop menu bar styles */
+
+/* Brand Sections */
+
+.product-card {
+    flex: 0 0 auto; 
+    width: 350px;
+    background-color: var(--platinum);
+    border-radius: 10px;
+    padding: 15px;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s;
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.product-image:hover .overlay {
+    opacity: 1;
+}
+
+.buy-button {
+    background-color: var(--night);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.buy-button:hover {
+    background-color: var(--silver);
+
+}
+
+/* Other text and rating styles */
+.product-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--night);
+    margin-top: 10px;
+    text-align: start;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.product-category {
+    font-size: 14px;
+    color: var(--silver);
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-size: 16px;
+    color: var(--night);
+    margin-bottom: 10px;
+}
+
+.product-rating {
+    color: var(--silver);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.brand-navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.brand-navbar a {
+    color: #111;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.brand-navbar a:hover {
+    background-color:#D4AF37;
+    color: #111;
+}
+
+/* Product Sections */
+.product-section {
+    display: none;
+    padding: 20px;
+    background-color: #ECECEA;
+    margin-top: 20px;
+}
+
+/* Show the product section when the target is active */
+#fenty:target, #mac:target, #ysl:target, #hermes:target {
+    display: block;
+}
+
+.brand-navbar a:target {
+    background-color: #F28D8D;
+    color: #111;
+}
+ .brand-navbar a.active {
+ font-weight: bold;
+ color: #b83333; 
+        }
+
+        
