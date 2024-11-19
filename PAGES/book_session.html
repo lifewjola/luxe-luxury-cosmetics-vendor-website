@@ -6,18 +6,183 @@
     <title>LUXE - Luxury Cosmetics</title>
     <link rel="icon" href= "../ASSETS/luxe_logo2.jpg"type="image/x-icon"/>
     <link rel="stylesheet" href="../STYLES/styles.css">
+    <style>
+               /* Additional CSS for session layout and form */
+        .session-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .session-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .session-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .session-box img {
+            width: 100%;
+            height: auto;
+        }
+        .session-box-content {
+            padding: 15px;
+        }
+        .session-box h3 {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .session-box p {
+            margin: 10px 0;
+        }
+        .session-box .fee {
+            font-weight: bold;
+            color: #333;
+        }
+        .session-box .book-button {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .form-section {
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .form-section h2 {
+            text-align: center;
+        }
+        .form-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .form-section input, .form-section select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-section button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <img src="../ASSETS/luxe_logo1.jpg" alt="LUXE">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="shop.html#fenty">Shop</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
                 <li><a href="book_session.html" class="active">Book a Session</a></li>
             </ul>
         </nav>
     </header>
+
+     <!-- Book a Session Section -->
+    <main>
+        <h1>Book a Session with one of our experts</h1>
+        <div class="session-container">
+            <!-- Make-up Tutorial -->
+            <div class="session-box">
+                <img src="../ASSETS/makeup tutorial .jpg" alt="Make-up Tutorial">
+                <div class="session-box-content">
+                    <h3>Make-up Tutorial</h3>
+                    <p>Learn step-by-step techniques to apply make-up for various occasions. Tailored for beginners and those looking to refine their skills.</p>
+                    <p class="fee">Fee per Hour: ₦5,000</p>
+                    <a href="#book-form" class="book-button">Book Session</a>
+                </div>
+            </div>
+            <!-- Make-up Artist -->
+            <div class="session-box">
+                <img src="../ASSETS/Makeup artist.jpg" alt="Make-up Artist">
+                <div class="session-box-content">
+                    <h3>Make-up Artist</h3>
+                    <p>Professional make-up services for events such as weddings, parties, or photoshoots. Enjoy a personalized experience with expert techniques.</p>
+                    <p class="fee">Fee per Hour: ₦8,000</p>
+                    <a href="#book-form" class="book-button">Book Session</a>
+                </div>
+            </div>
+            <!-- Skin-care Consultation -->
+            <div class="session-box">
+                <img src="../ASSETS/skin care.jpg" alt="Skin-care Consultation">
+                <div class="session-box-content">
+                    <h3>Skin-care Consultation</h3>
+                    <p>One-on-one consultation to assess your skin type and recommend personalized skin-care routines and products.</p>
+                    <p class="fee">Fee per Hour: ₦4,000</p>
+                    <a href="#book-form" class="book-button">Book Session</a>
+                </div>
+            </div>
+            <!-- Cosmetics Recommendation -->
+            <div class="session-box">
+                <img src="../ASSETS/Cosmetics.jpg" alt="Cosmetics Recommendation">
+                <div class="session-box-content">
+                    <h3>Cosmetics Recommendation</h3>
+                    <p>Expert advice on choosing the right cosmetic products tailored to your skin type, preferences, and budget.</p>
+                    <p class="fee">Fee per Hour: ₦3,500</p>
+                    <a href="#book-form" class="book-button">Book Session</a>
+                </div>
+            </div>
+            <!-- Match Your Shade -->
+            <div class="session-box">
+                <img src="../ASSETS/foundation shade.jpg" alt="Match Your Shade">
+                <div class="session-box-content">
+                    <h3>Match Your Shade</h3>
+                    <p>Find your perfect foundation and concealer shade through professional color matching techniques.</p>
+                    <p class="fee">Fee per Hour: ₦2,500</p>
+                    <a href="#book-form" class="book-button">Book Session</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <section id="book-form" class="form-section">
+            <h2>Book Your Session</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="session-type">Session Type</label>
+                <select id="session-type" name="session-type" required>
+                    <option value="Make-up Tutorial">Make-up Tutorial</option>
+                    <option value="Make-up Artist">Make-up Artist</option>
+                    <option value="Skin-care Consultation">Skin-care Consultation</option>
+                    <option value="Cosmetics Recommendation">Cosmetics Recommendation</option>
+                    <option value="Match Your Shade">Match Your Shade</option>
+                </select>
+
+                <label for="session-time">Available Date/Time</label>
+                <select id="session-time" name="session-time" required>
+                    <option value="2024-11-12 10:00">2024-11-12 10:00</option>
+                    <option value="2024-11-13 12:00">2024-11-13 12:00</option>
+                    <!-- Additional date/time options as needed -->
+                </select>
+
+                <button type="submit">Book Session</button>
+            </form>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
